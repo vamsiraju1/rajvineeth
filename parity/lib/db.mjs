@@ -1,9 +1,8 @@
 import { DatabaseSync } from "node:sqlite";
 import path from "path";
-import { fileURLToPath } from "url";
 
-const here = path.dirname(fileURLToPath(import.meta.url));
-export const DB_PATH = path.join(here, "..", "data", "parity.db");
+// cwd-relative: npm scripts and the Next server both run from parity/
+export const DB_PATH = path.join(process.cwd(), "data", "parity.db");
 
 export function openDb(readonly = false) {
   const db = new DatabaseSync(DB_PATH, { readOnly: readonly });

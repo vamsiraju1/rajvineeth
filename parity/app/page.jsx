@@ -72,7 +72,10 @@ export default function Page() {
   const [busy, setBusy] = useState(false);
   const [modal, setModal] = useState(null); // {title, body}
   const [tab, setTab] = useState("grid");
+  const [uploading, setUploading] = useState(null); // filename while ingesting
+  const [uploadMsg, setUploadMsg] = useState(null);
   const chatEndRef = useRef(null);
+  const fileRef = useRef(null);
 
   const load = () => fetch("/api/state").then((r) => r.json()).then(setData);
   useEffect(() => { load(); }, []);
@@ -132,9 +135,28 @@ export default function Page() {
     load();
   };
 
+  const uploadVendorFile = async (file) => {
+    if (!file || uploading) return;
+    setUploading(file.name);
+    setUploadMsg(null);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      const r = await fetch("/api/upload", { method: "POST", body: fd }).then((x) => x.json());
+      if (r.error) setUploadMsg({ err: true, text: r.error });
+      else setUploadMsg({ err: false, text: `Read "${r.vendor}": ${r.coverage}/30 lines priced, ${r.exceptions} exception(s) raised — ${r.compliance}` });
+      await load();
+    } catch (e) {
+      setUploadMsg({ err: true, text: String(e) });
+    }
+    setUploading(null);
+  };
+
   const selCell = sel ? cellMap[`${sel.line}|${sel.vendor}`] : null;
   const selLine = sel ? lines.find((l) => l.id === sel.line) : null;
-  const photoRow = selCell?.anchor ? (JSON.parse(selCell.anchor).ref || "").match(/row\s*(\d+)/i)?.[1] : null;
+  // Row-band crops are served for the reference photo artifact; uploaded photos show their text anchor.
+  const photoRow = sel?.vendor === "Shree Balaji Packers" && selCell?.anchor
+    ? (JSON.parse(selCell.anchor).ref || "").match(/row\s*(\d+)/i)?.[1] : null;
   const vendorOf = (name) => vendors.find((v) => v.name === name);
 
   const suggestions = [
@@ -188,7 +210,33 @@ export default function Page() {
                 </button>
               </div>
             ))}
+            <div
+              className={`vcard addcard ${uploading ? "busy" : ""}`}
+              onClick={() => !uploading && fileRef.current?.click()}
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={(e) => { e.preventDefault(); uploadVendorFile(e.dataTransfer.files?.[0]); }}
+              title="Drop a vendor's quote here — PDF, Excel, Word, photo, or email text"
+            >
+              {uploading ? (
+                <>
+                  <div className="vname"><span className="spinner" />Reading {uploading}…</div>
+                  <div className="vkind">two extraction passes on the live model — 1–2 min</div>
+                </>
+              ) : (
+                <>
+                  <div className="vname">＋ Add vendor response</div>
+                  <div className="vkind">drop or click — PDF / Excel / Word / photo / email text. Read live, same pipeline, no special path.</div>
+                </>
+              )}
+              <input ref={fileRef} type="file" hidden accept=".pdf,.xlsx,.docx,.jpg,.jpeg,.png,.txt,.eml"
+                onChange={(e) => { uploadVendorFile(e.target.files?.[0]); e.target.value = ""; }} />
+            </div>
           </div>
+          {uploadMsg && (
+            <div className="panelbody" style={{ paddingTop: 0, fontSize: 12.5, color: uploadMsg.err ? "var(--danger)" : "var(--verified)" }}>
+              {uploadMsg.err ? "⚠ " : "✓ "}{uploadMsg.text}
+            </div>
+          )}
         </div>
 
         <div className="panelcard">
@@ -289,7 +337,9 @@ export default function Page() {
               {exceptions.length === 0 && <div style={{ color: "var(--faint)" }}>No exceptions.</div>}
               {exceptions.map((e) => {
                 const detail = JSON.parse(e.detail || "{}");
-                const row = detail.anchor?.match?.(/row\s*(\d+)/i)?.[1] || (e.line_id && cellMap[`${e.line_id}|${e.vendor}`]?.anchor && (JSON.parse(cellMap[`${e.line_id}|${e.vendor}`].anchor).ref || "").match(/row\s*(\d+)/i)?.[1]);
+                const row = e.vendor === "Shree Balaji Packers"
+                  ? (detail.anchor?.match?.(/row\s*(\d+)/i)?.[1] || (e.line_id && cellMap[`${e.line_id}|${e.vendor}`]?.anchor && (JSON.parse(cellMap[`${e.line_id}|${e.vendor}`].anchor).ref || "").match(/row\s*(\d+)/i)?.[1]))
+                  : null;
                 return (
                   <div className={`exccard ${e.status !== "open" ? "resolved" : ""}`} key={e.id}>
                     <div className="mono" style={{ fontSize: 10, color: "var(--faint)", marginBottom: 4 }}>

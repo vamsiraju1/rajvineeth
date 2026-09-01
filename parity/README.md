@@ -55,8 +55,10 @@ Put an Anthropic API key in `../.env` as `ANTHROPIC_API_KEY=...` (the app loads 
 
 Demo questions have no special path. Every question — including improvised ones — runs the same
 agent → constraints → SQL → render loop over the same store. Extraction outputs are cached by
-document sha256 so recorded and live runs agree; delete `data/cache/` to force fresh extraction, or
-drop a sixth vendor file into `data/inbox/` and add it to `scripts/ingest.mjs`'s vendor list.
+document sha256 so recorded and live runs agree; delete `data/cache/` to force fresh extraction.
+And the **"＋ Add vendor response"** card ingests any new quote live — PDF/xlsx/docx/photo/text —
+through the identical dual-pass pipeline, naming the vendor from the document itself and adding a
+sixth column mid-demo. `npm run ingest` resets to the five reference vendors.
 
 ## Honest scope triage
 

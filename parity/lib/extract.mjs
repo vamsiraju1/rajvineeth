@@ -9,11 +9,12 @@ import Anthropic from "@anthropic-ai/sdk";
 import ExcelJS from "exceljs";
 import mammoth from "mammoth";
 
-dotenv.config({ path: new URL("../../.env", import.meta.url).pathname });
+// paths are cwd-relative: npm scripts and the Next server both run from parity/
+dotenv.config({ path: path.join(process.cwd(), "..", ".env") });
 const MODEL = process.env.PARITY_MODEL || "claude-opus-5";
 export const client = new Anthropic();
 
-const CACHE_DIR = new URL("../data/cache/", import.meta.url).pathname;
+const CACHE_DIR = path.join(process.cwd(), "data", "cache");
 fs.mkdirSync(CACHE_DIR, { recursive: true });
 
 const sha = (buf) => crypto.createHash("sha256").update(buf).digest("hex").slice(0, 16);

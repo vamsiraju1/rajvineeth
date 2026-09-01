@@ -3,11 +3,12 @@
 // computes, and the final answer is submitted through a strict tool so the UI can
 // render prose, tables, charts and receipts separately. Every question, including
 // improvised ones, flows through this same loop; nothing is hardcoded per question.
+import path from "path";
 import dotenv from "dotenv";
 import Anthropic from "@anthropic-ai/sdk";
 import { openDb, getMeta } from "./db.mjs";
 
-dotenv.config({ path: new URL("../../.env", import.meta.url).pathname });
+dotenv.config({ path: path.join(process.cwd(), "..", ".env") });
 const MODEL = process.env.PARITY_MODEL || "claude-opus-5";
 const client = new Anthropic();
 

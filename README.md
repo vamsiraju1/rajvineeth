@@ -82,6 +82,12 @@ The screen has four areas:
 
 **Improvise freely** — ask your own questions in your own words. Everything runs through the same live loop; that's the point.
 
+### Add your own vendor file (the anti-hardcoding test)
+
+The last card in the vendor strip is **"＋ Add vendor response"**. Click it (or drag a file onto it) and give it any quote — **PDF, Excel, Word, a photo, or an email saved as .txt**. The system reads it live with the same dual-pass extraction (takes 1–2 minutes, costs a few cents), figures out the vendor's name from the document itself, and adds it as a new column — with its own verification states, terms, questionnaire answers, and exception cards. The analyst immediately includes it in every answer.
+
+This is the strongest proof the demo isn't canned: hand the interviewer a nasty quote they wrote themselves and let the pipeline eat it on camera. To go back to the clean five-vendor reference state afterwards, run `npm run ingest` (instant — everything is cached).
+
 ---
 
 ## Recording the video

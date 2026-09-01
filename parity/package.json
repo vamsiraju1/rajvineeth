@@ -1,0 +1,24 @@
+{
+  "name": "parity",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3400",
+    "build": "next build",
+    "start": "next start -p 3400",
+    "fabricate": "node scripts/fabricate.mjs",
+    "ingest": "node scripts/ingest.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.113.0",
+    "docx": "^9.5.0",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "mammoth": "^1.9.0",
+    "next": "^15.5.0",
+    "pdfkit": "^0.15.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sharp": "^0.34.2"
+  }
+}

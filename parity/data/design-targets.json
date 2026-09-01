@@ -1,0 +1,20 @@
+{
+  "baseline_ly": 40901100,
+  "naive_split": 37896660,
+  "compliant_split": 39005580,
+  "single_sunrise_std": 40030500,
+  "single_sunrise_earlypay": 39229890,
+  "kwality_wins_at_88_40": [
+    "L03",
+    "L06",
+    "L09",
+    "L12",
+    "L15",
+    "L19"
+  ],
+  "kwality_wins_at_91": [
+    "L15",
+    "L19"
+  ],
+  "compliant_at_91": 39172260
+}

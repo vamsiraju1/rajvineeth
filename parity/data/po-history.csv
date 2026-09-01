@@ -1,0 +1,31 @@
+line_id,description,style,ply,dims_mm,po_number,po_date,unit_price_inr,vendor
+L01,Aloo Bhujia 12x200g shipper,RSC,3,410x340x225,PO-451901,2026-01-18,12.90,Ganpati Boards
+L02,Moong Dal 12x200g shipper,RSC,3,335x260x150,PO-454302,2026-03-15,7.95,Ganpati Boards
+L03,Peanut Masala 12x180g shipper,RSC,3,370x215x235,PO-451803,2026-01-13,9.65,Ganpati Boards
+L04,Banana Chips 24x90g shipper,RSC,3,405x295x285,PO-458904,2026-02-15,14.55,Ganpati Boards
+L05,Soya Sticks 24x100g shipper,RSC,3,345x290x200,PO-459605,2026-02-18,11.05,Ganpati Boards
+L06,Khatta Meetha 12x350g shipper,RSC,3,440x260x295,PO-459906,2026-02-15,13.60,Ganpati Boards
+L07,Navratan Mix 12x350g shipper,RSC,3,380x205x225,PO-455507,2026-02-10,8.65,Ganpati Boards
+L08,Chana Jor 24x120g shipper,RSC,3,410x270x275,PO-452608,2026-02-10,11.85,Ganpati Boards
+L09,Corn Puffs 36x60g shipper,RSC,3,395x350x215,PO-454109,2026-03-14,15.35,Ganpati Boards
+L10,Ragi Chips 24x80g shipper,RSC,3,425x205x205,PO-453310,2026-01-18,9.25,Ganpati Boards
+L11,Masala Makhana 24x70g shipper,RSC,3,400x205x160,PO-453611,2026-01-11,7.95,Ganpati Boards
+L12,Bhel Kit 12x250g shipper,RSC,3,365x255x170,PO-455612,2026-02-14,9.65,Ganpati Boards
+L13,Sev Murmura 24x150g shipper,RSC,3,450x275x185,PO-458113,2026-01-14,10.75,Ganpati Boards
+L14,Dry Fruit Mix 12x150g shipper,RSC,3,370x330x220,PO-454714,2026-03-12,13.60,Ganpati Boards
+L15,Jackfruit Chips 24x85g shipper,RSC,3,425x285x285,PO-453415,2026-03-13,14.25,Ganpati Boards
+L16,Multigrain Mix 12x300g shipper,RSC,3,355x205x215,PO-453016,2026-01-11,7.35,Ganpati Boards
+L17,Festive Pack 6x500g shipper,RSC,3,325x240x265,PO-459117,2026-03-11,10.35,Ganpati Boards
+L18,Master carton - bhujia family,RSC,5,400x305x320,PO-453018,2026-02-18,30.30,Ganpati Boards
+L19,Master carton - chips family,RSC,5,405x310x315,PO-459519,2026-01-14,30.70,Ganpati Boards
+L20,Master carton - namkeen mix,RSC,5,410x315x325,PO-456820,2026-03-10,31.90,Ganpati Boards
+L21,Master carton - puffs,RSC,5,425x300x325,PO-451421,2026-01-12,31.15,Ganpati Boards
+L22,Master carton - makhana,RSC,5,395x310x285,PO-457122,2026-03-11,28.90,Ganpati Boards
+L23,Master carton - export namkeen,RSC,5,405x310x320,PO-452923,2026-01-11,30.95,Ganpati Boards
+L24,Master carton - gifting,RSC,5,410x295x325,PO-451924,2026-02-17,29.20,Ganpati Boards
+L25,Master carton - bhel kits,RSC,5,425x290x310,PO-457925,2026-03-18,28.70,Ganpati Boards
+L26,Master carton - dal snacks,RSC,5,410x305x305,PO-458226,2026-03-17,30.05,Ganpati Boards
+L27,Master carton - assorted promo,RSC,5,395x305x295,PO-451127,2026-02-14,28.95,Ganpati Boards
+L28,E-comm mailer S (die-cut),die-cut mailer,3,300x220x80,PO-459828,2026-02-10,5.15,Ganpati Boards
+L29,E-comm mailer M (die-cut),die-cut mailer,3,340x260x100,PO-453529,2026-02-12,6.60,Ganpati Boards
+L30,E-comm mailer L (die-cut),die-cut mailer,3,400x300x120,PO-455830,2026-02-14,8.45,Ganpati Boards

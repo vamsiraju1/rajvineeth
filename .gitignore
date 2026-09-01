@@ -1,0 +1,16 @@
+# NEVER commit the API key
+.env
+.env.*
+
+# the assignment brief is marked confidential — keep it out of the repo
+Aerchain-Product-Assignment*.pdf
+
+# build/runtime artifacts
+node_modules/
+.next/
+*.db
+*.db-wal
+*.db-shm
+parity/data/cache/
+.DS_Store
+.claude/

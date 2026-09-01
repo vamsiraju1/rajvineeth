@@ -1,0 +1,594 @@
+{
+  "event": "SVD/RFQ/FY27/CORR-01",
+  "buyer": "Svaad Foods Pvt Ltd",
+  "category": "Corrugated boxes — FY27 annual rate contract",
+  "plants": [
+    "Bhiwandi",
+    "Hosur"
+  ],
+  "issued": "2026-08-18",
+  "due": "2026-08-29",
+  "terms": {
+    "price_basis": "Per piece, INR, FOR destination plant, GST extra as applicable (HSN 4819)",
+    "payment": "45 days credit from GRN",
+    "validity": "Rates firm for 12 months; quarterly review against kraft paper index",
+    "rejection_tolerance": "2%"
+  },
+  "questionnaire": [
+    {
+      "key": "is2771",
+      "label": "Conformance to IS 2771 (declaration)"
+    },
+    {
+      "key": "test_report",
+      "label": "NABL-lab BF/ECT test report attached"
+    },
+    {
+      "key": "fsc",
+      "label": "FSC chain-of-custody certificate"
+    },
+    {
+      "key": "ppm",
+      "label": "Defect commitment <= 2,000 PPM"
+    },
+    {
+      "key": "backup",
+      "label": "Backup capacity / second line declared"
+    },
+    {
+      "key": "credit45",
+      "label": "Acceptance of 45-day credit"
+    }
+  ],
+  "fx_pin": {
+    "currency": "USD",
+    "rate_inr": 88.4,
+    "source": "RBI reference rate, pinned 2026-09-01"
+  },
+  "freight_lanes_inr_per_kg": {
+    "Taloja->Bhiwandi": 0.9,
+    "Taloja->Hosur": 6.8
+  },
+  "lines": [
+    {
+      "id": "L01",
+      "description": "Aloo Bhujia 12x200g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        410,
+        340,
+        225
+      ],
+      "liner_gsm": 120,
+      "flute_gsm": 100,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.353,
+      "qty_month": 12000
+    },
+    {
+      "id": "L02",
+      "description": "Moong Dal 12x200g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        335,
+        260,
+        150
+      ],
+      "liner_gsm": 120,
+      "flute_gsm": 112,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.218,
+      "qty_month": 14000
+    },
+    {
+      "id": "L03",
+      "description": "Peanut Masala 12x180g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        370,
+        215,
+        235
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 120,
+      "bf": 20,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.264,
+      "qty_month": 13500
+    },
+    {
+      "id": "L04",
+      "description": "Banana Chips 24x90g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        405,
+        295,
+        285
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.399,
+      "qty_month": 15500
+    },
+    {
+      "id": "L05",
+      "description": "Soya Sticks 24x100g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        345,
+        290,
+        200
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 100,
+      "bf": 18,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.303,
+      "qty_month": 11000
+    },
+    {
+      "id": "L06",
+      "description": "Khatta Meetha 12x350g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        440,
+        260,
+        295
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 112,
+      "bf": 18,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.373,
+      "qty_month": 6500
+    },
+    {
+      "id": "L07",
+      "description": "Navratan Mix 12x350g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        380,
+        205,
+        225
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 100,
+      "bf": 18,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.237,
+      "qty_month": 6500
+    },
+    {
+      "id": "L08",
+      "description": "Chana Jor 24x120g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        410,
+        270,
+        275
+      ],
+      "liner_gsm": 120,
+      "flute_gsm": 112,
+      "bf": 20,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.324,
+      "qty_month": 14000
+    },
+    {
+      "id": "L09",
+      "description": "Corn Puffs 36x60g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        395,
+        350,
+        215
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 112,
+      "bf": 22,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.421,
+      "qty_month": 5500
+    },
+    {
+      "id": "L10",
+      "description": "Ragi Chips 24x80g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        425,
+        205,
+        205
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 112,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.253,
+      "qty_month": 5500
+    },
+    {
+      "id": "L11",
+      "description": "Masala Makhana 24x70g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        400,
+        205,
+        160
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 112,
+      "bf": 20,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.218,
+      "qty_month": 14500
+    },
+    {
+      "id": "L12",
+      "description": "Bhel Kit 12x250g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        365,
+        255,
+        170
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 120,
+      "bf": 20,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.264,
+      "qty_month": 8000
+    },
+    {
+      "id": "L13",
+      "description": "Sev Murmura 24x150g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        450,
+        275,
+        185
+      ],
+      "liner_gsm": 120,
+      "flute_gsm": 112,
+      "bf": 20,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.294,
+      "qty_month": 6500
+    },
+    {
+      "id": "L14",
+      "description": "Dry Fruit Mix 12x150g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        370,
+        330,
+        220
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 100,
+      "bf": 20,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.372,
+      "qty_month": 15000
+    },
+    {
+      "id": "L15",
+      "description": "Jackfruit Chips 24x85g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        425,
+        285,
+        285
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 100,
+      "bf": 18,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.39,
+      "qty_month": 13500
+    },
+    {
+      "id": "L16",
+      "description": "Multigrain Mix 12x300g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        355,
+        205,
+        215
+      ],
+      "liner_gsm": 120,
+      "flute_gsm": 100,
+      "bf": 18,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.201,
+      "qty_month": 8500
+    },
+    {
+      "id": "L17",
+      "description": "Festive Pack 6x500g shipper",
+      "style": "RSC",
+      "ply": 3,
+      "dims_mm": [
+        325,
+        240,
+        265
+      ],
+      "liner_gsm": 140,
+      "flute_gsm": 120,
+      "bf": 20,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.284,
+      "qty_month": 9000
+    },
+    {
+      "id": "L18",
+      "description": "Master carton - bhujia family",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        400,
+        305,
+        320
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.758,
+      "qty_month": 5000
+    },
+    {
+      "id": "L19",
+      "description": "Master carton - chips family",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        405,
+        310,
+        315
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.768,
+      "qty_month": 2500
+    },
+    {
+      "id": "L20",
+      "description": "Master carton - namkeen mix",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        410,
+        315,
+        325
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.797,
+      "qty_month": 3000
+    },
+    {
+      "id": "L21",
+      "description": "Master carton - puffs",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        425,
+        300,
+        325
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.779,
+      "qty_month": 5000
+    },
+    {
+      "id": "L22",
+      "description": "Master carton - makhana",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        395,
+        310,
+        285
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.723,
+      "qty_month": 4000
+    },
+    {
+      "id": "L23",
+      "description": "Master carton - export namkeen",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        405,
+        310,
+        320
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.774,
+      "qty_month": 3500
+    },
+    {
+      "id": "L24",
+      "description": "Master carton - gifting",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        410,
+        295,
+        325
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 112,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.73,
+      "qty_month": 5000
+    },
+    {
+      "id": "L25",
+      "description": "Master carton - bhel kits",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        425,
+        290,
+        310
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 112,
+      "bf": 22,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.718,
+      "qty_month": 5000
+    },
+    {
+      "id": "L26",
+      "description": "Master carton - dal snacks",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        410,
+        305,
+        305
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.751,
+      "qty_month": 4000
+    },
+    {
+      "id": "L27",
+      "description": "Master carton - assorted promo",
+      "style": "RSC",
+      "ply": 5,
+      "dims_mm": [
+        395,
+        305,
+        295
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Hosur",
+      "uom": "piece",
+      "weight_kg": 0.724,
+      "qty_month": 2500
+    },
+    {
+      "id": "L28",
+      "description": "E-comm mailer S (die-cut)",
+      "style": "die-cut mailer",
+      "ply": 3,
+      "dims_mm": [
+        320,
+        240,
+        90
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.127,
+      "qty_month": 13500
+    },
+    {
+      "id": "L29",
+      "description": "E-comm mailer M (die-cut)",
+      "style": "die-cut mailer",
+      "ply": 3,
+      "dims_mm": [
+        360,
+        280,
+        110
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.17,
+      "qty_month": 10500
+    },
+    {
+      "id": "L30",
+      "description": "E-comm mailer L (die-cut)",
+      "style": "die-cut mailer",
+      "ply": 3,
+      "dims_mm": [
+        420,
+        320,
+        130
+      ],
+      "liner_gsm": 150,
+      "flute_gsm": 120,
+      "bf": 22,
+      "plant": "Bhiwandi",
+      "uom": "piece",
+      "weight_kg": 0.224,
+      "qty_month": 9500
+    }
+  ]
+}

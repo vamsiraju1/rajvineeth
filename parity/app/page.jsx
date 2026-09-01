@@ -190,6 +190,17 @@ export default function Page() {
             <input type="checkbox" checked={strict} onChange={(e) => setStrict(e.target.checked)} />
             strict compliance mode
           </label>
+          <button
+            className={`btn addbtn ${uploading ? "busy" : ""}`}
+            onClick={() => !uploading && fileRef.current?.click()}
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => { e.preventDefault(); uploadVendorFile(e.dataTransfer.files?.[0]); }}
+            title="Add a vendor response — drop or click. PDF / Excel / Word / photo / email text. Read live through the same pipeline."
+          >
+            {uploading ? <><span className="spinner" />reading {uploading.length > 18 ? uploading.slice(0, 16) + "…" : uploading}</> : "＋ Add vendor response"}
+          </button>
+          <input ref={fileRef} type="file" hidden accept=".pdf,.xlsx,.docx,.jpg,.jpeg,.png,.txt,.eml"
+            onChange={(e) => { uploadVendorFile(e.target.files?.[0]); e.target.value = ""; }} />
         </div>
 
         <div className="panelcard">
@@ -210,27 +221,6 @@ export default function Page() {
                 </button>
               </div>
             ))}
-            <div
-              className={`vcard addcard ${uploading ? "busy" : ""}`}
-              onClick={() => !uploading && fileRef.current?.click()}
-              onDragOver={(e) => e.preventDefault()}
-              onDrop={(e) => { e.preventDefault(); uploadVendorFile(e.dataTransfer.files?.[0]); }}
-              title="Drop a vendor's quote here — PDF, Excel, Word, photo, or email text"
-            >
-              {uploading ? (
-                <>
-                  <div className="vname"><span className="spinner" />Reading {uploading}…</div>
-                  <div className="vkind">two extraction passes on the live model — 1–2 min</div>
-                </>
-              ) : (
-                <>
-                  <div className="vname">＋ Add vendor response</div>
-                  <div className="vkind">drop or click — PDF / Excel / Word / photo / email text. Read live, same pipeline, no special path.</div>
-                </>
-              )}
-              <input ref={fileRef} type="file" hidden accept=".pdf,.xlsx,.docx,.jpg,.jpeg,.png,.txt,.eml"
-                onChange={(e) => { uploadVendorFile(e.target.files?.[0]); e.target.value = ""; }} />
-            </div>
           </div>
           {uploadMsg && (
             <div className="panelbody" style={{ paddingTop: 0, fontSize: 12.5, color: uploadMsg.err ? "var(--danger)" : "var(--verified)" }}>
